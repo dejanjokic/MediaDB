@@ -6,7 +6,6 @@ import net.dejanjokic.mediadb.di.scope.ApplicationScope
 import net.dejanjokic.mediadb.ui.tv.details.TvShowDetailsFragment
 import net.dejanjokic.mediadb.ui.tv.list.TvShowListFragment
 
-// TODO: Fix the scoping mess
 @ApplicationScope
 @Component(modules = [TvShowsModule::class])
 interface TvShowsComponent {

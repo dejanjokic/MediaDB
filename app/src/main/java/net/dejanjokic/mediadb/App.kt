@@ -6,6 +6,7 @@ import net.dejanjokic.mediadb.di.component.DaggerApplicationComponent
 import net.dejanjokic.mediadb.util.log.CustomTimberTree
 import timber.log.Timber
 
+// TODO: Fix the scoping mess
 class App : Application() {
 
     private lateinit var component: ApplicationComponent
