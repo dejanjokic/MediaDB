@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loadingAnimTvShowDetails"
+            android:layout_width="@dimen/loading_view_size"
+            android:layout_height="@dimen/loading_view_size"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:lottie_fileName="loading.json"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"/>
+
+        <ImageView
+            android:id="@+id/imageViewTvShowDetailsBackdrop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/details_background_height"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/tv_show_background_image"
+            android:foreground="@drawable/gradient_background_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic"/>
+
+        <ImageView
+            android:id="@+id/imageViewTvShowDetailsPoster"
+            android:layout_width="@dimen/details_poster_width"
+            android:layout_height="@dimen/details_poster_height"
+            android:contentDescription="@string/tv_show_poster"
+            android:layout_marginTop="150dp"
+            android:layout_marginStart="@dimen/margin_large"
+            android:background="@color/colorAccent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:src="@tools:sample/avatars"
+            tools:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/textViewTvShowDetailsTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin_xlarge"
+            app:layout_constraintStart_toEndOf="@id/imageViewTvShowDetailsPoster"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/imageViewTvShowDetailsPoster"
+            style="@style/TextAppearance.AppCompat.Title"
+            tools:text="@tools:sample/full_names"/>
+
+        <TextView
+            android:id="@+id/textViewTvShowDetailsRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_star"
+            app:layout_constraintStart_toStartOf="@id/textViewTvShowDetailsTitle"
+            app:layout_constraintTop_toBottomOf="@id/textViewTvShowDetailsTitle"
+            tools:text="7.5"/>
+
+        <TextView
+            android:id="@+id/textViewTvShowDetailsOverviewLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/overview_label"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginStart="@dimen/margin_medium"
+            app:layout_constraintTop_toBottomOf="@id/imageViewTvShowDetailsPoster"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/TextAppearance.AppCompat.Title"/>
+
+        <TextView
+            android:id="@+id/textViewTvShowDetailsOverview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:paddingStart="@dimen/padding_large"
+            android:paddingEnd="@dimen/padding_large"
+            app:layout_constraintTop_toBottomOf="@id/textViewTvShowDetailsOverviewLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="@tools:sample/lorem/random"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

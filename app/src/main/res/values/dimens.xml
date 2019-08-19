@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="margin_medium">8dp</dimen>
+    <dimen name="margin_large">16dp</dimen>
+    <dimen name="margin_xlarge">32dp</dimen>
+
+    <dimen name="padding_small">4dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_xlarge">32dp</dimen>
+
+    <dimen name="loading_view_size">100dp</dimen>
+
+    <dimen name="details_background_height">250dp</dimen>
+    <dimen name="details_poster_width">120dp</dimen>
+    <dimen name="details_poster_height">180dp</dimen>
+</resources>
